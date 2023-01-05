@@ -31,13 +31,14 @@ markdown: kramdown
 github_username:  csulb-nanoelectronics
 collections_dir: my_collections
 collections:
-  portfolio: 
+  portfolio:
   teaching:
   em_problemsets:
     order:
   qm1_problemsets:
   qm2_problemsets:
   dft:
+  teslatron: 
 
 # Build settings
 theme: minima

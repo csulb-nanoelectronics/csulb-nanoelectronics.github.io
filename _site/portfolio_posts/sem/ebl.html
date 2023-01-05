@@ -87,56 +87,28 @@
 		<nav class="toc">
 			<ul>
 				
-				<li><a href="#Background">Background</a>
+				<li><a href="#Preparing Sample for Lithography">Preparing Sample for Lithography</a>
 
 				<!-- <ul>
 					
 				</ul> -->
 				</li> 
 				
-				<li><a href="#Warnings">Warnings</a>
+				<li><a href="#Preparing for Lithography at the SEM">Preparing for Lithography at the SEM</a>
 
 				<!-- <ul>
 					
 				</ul> -->
 				</li> 
 				
-				<li><a href="#Loading Sample">Loading Sample</a>
+				<li><a href="#Performing Lithography at the SEM">Performing Lithography at the SEM</a>
 
 				<!-- <ul>
 					
 				</ul> -->
 				</li> 
 				
-				<li><a href="#Measuring Spot Size Current">Measuring Spot Size Current</a>
-
-				<!-- <ul>
-					
-				</ul> -->
-				</li> 
-				
-				<li><a href="#Navigating to the Origin">Navigating to the Origin</a>
-
-				<!-- <ul>
-					
-				</ul> -->
-				</li> 
-				
-				<li><a href="#Preparing the Run Files">Preparing the Run Files</a>
-
-				<!-- <ul>
-					
-				</ul> -->
-				</li> 
-				
-				<li><a href="#Alignment Windows">Alignment Windows</a>
-
-				<!-- <ul>
-					
-				</ul> -->
-				</li> 
-				
-				<li><a href="#Development">Development</a>
+				<li><a href="#Developing Sample After Lithography">Developing Sample After Lithography</a>
 
 				<!-- <ul>
 					
@@ -158,47 +130,78 @@
 		
         <p> 
 CSULB Department of Physics and Astronomy <br> 
-Hall of Science Room 263 <br> 
+Hall of Science Room 261 <br> 
 Supervisor: Dr. Claudia Ojeda-Aristizabal <br> <br> 
 Author: Maya Martinez <br> 
 Last Reviewed: Jan. 05, 2023
 
 </p>
 
-<div id= "Background">
+<div id= "Preparing Sample for Lithography">
     <h2>
-        Background
+        Preparing Sample for Lithography
     </h2>
     <p>
-        Warming up the cryostat is a procedure where the entire cryostat (including the pulse tubes, variable temperature insert (VTI), probe, magnet) are brought up to room temperature. This is typically done for two main reasons
-        <ul>
+        Before taking your sample to the scanning electron microscope (SEM), you must cover your sample in two layers of positive tone, electron resist using the spincoater.
+        <ol>
             <li>
-     For annual maintenance on the various cryostat filters, tip seals of the circulation pump, and zeolite trap. 
+                Apply a few drops of 495 polymethylmethaceylate (PMMA) onto the sample and spin for 1 min at 3000 rpm.
             </li>
             <li>
-                In the event of a power outage or HVAC outage and the compressor and chiller are no longer functioning to keep the cryostat at base temperature ~1.45 K leading to an uncontrolled warm up of not only the sample space but also the pulse tubes and magnet. In the case where the outage has been for a few hours or more and the temperature has risen significantly, it is possible for there to be a loss in vacuum and subsequent contamination of the circulating Helium. 
+                Let the sample sit for 5 min.
             </li>
-        </ul>
+            <li>
+                Apply an additional couple of drops of 950 PMMA and spin for 1 min at 4000 rpm.
+            </li>
+            <li>
+                Bake the sample for 5 mins at 180 &#8451;
+            </li>
+        </ol>
+        Now you’re almost ready to head over to the SEM. Before heading over, make sure to collect the sample puck, a pair of tweezers, a flat-head screw- driver, and the notebook to write beam currents in. The sample puck is how you will fix your sample onto the SEM stage, see Fig. 4. Additionally, prior to going to the SEM, take note of where you set your origin in the DesignCAD file.
     </p>
 </div>
 
-<div id = "Warnings">
-    <h3>
-        Warnings 
-    </h3>
-    <p>
-        <ul>
-            <li>
-                The following steps/procedure is outlined in the Teslatron manual which is in a white binder that should be located on a counter-space in 263. When in doubt, refer to that. A PDF version is also available on Amazon AWS S3. 
-            </li>
-            <li>
-                Also present are past Teslatron maintenance notebooks that have detailed past warm up procedures. Those are helpful in detailing any steps or methods in more detail or other mishaps or errors that previous members might have encountered. 
-            </li>
-        </ul>
-    </p>
+<div id = "Preparing for Lithography at the SEM">
+    <h2>
+        Preparing for Lithography at the SEM
+    </h2>
+
+    <div id = "resistivity_container"> 
+        <div class = 'resistivity'> 
+            <img src='/images/sem/ebl/fig1.png'>
+            <figcaption>
+                Fig. 1 Computer and scanning electron microscope set up. <br>
+            </figcaption>
+        </div>
+        <div id = "flex_item_1"> 
+        <p>
+            <br> 
+            Now the excitement begins!
+            <ol>
+                <li>
+                    We will be operating the two right-most computers, shown in Fig.1. The right most computer should be already on, if not turn it on. This computer directly interfaces with the SEM. Turn on the computer corresponding to the middle screen by turning on the black left most computer (on the ground). It should have a label with Dr. Ojeda-Aristizabal's name on it. This computer will run the NPGS file – hereafter we’ll refer to this computer as the NPGS computer. When turning on the NPGS computer the operating system should start with Windows 7. If Windows 10 is powered up, then restart the computer and select Windows 7 at the partition window. 
+                </li><br> 
+                <li>
+                    When the computers are on, log in using the `supervisor’ user, the password is 'supervisor'.
+                </li><br> 
+                <li>
+                    On the SEM computer, the software xT Microscope should already be open. If not, open the software located on the desktop, which will then require the same login information. Once the software is open, click Start UI at the top of the screen. The log-in information is the same all throughout. 
+                </li>
+                <li>
+                    We begin by first clicking the Home stage button. Homing the stage brings the platform, where we place our samples, to its origin.
+                    <ul>
+                        <li>
+                            <b> Note! </b> The bottom right panel is a live view of the SEM stage. If it is paused, indicated by the presence of a green pause sign, un- pause it by first clicking on the paused window and then selecting the pause icon next to the camera icon at the top. See Fig. 2. If it looks like the homing process is going to crash the stage into the objective, you can stop the process at any point by pressing the ESC key on the keyboard. It is highly recommended to have your finger at the ready above this key, just in case of emergency.
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+        </p>
+    </div>
+    </div>
 </div>
 
-<div id = "Preparation">
+<!-- <div id = "Preparation">
 <h3>
     Preparation for Warm Up 
 </h3>
@@ -234,12 +237,12 @@ If the magnet is energized (ie, it has a non-zero field or current running throu
 </p>
 <br> 
 </ol>
-</div>
+</div> -->
 
 
 
 
-<div id='intro-flex-container'> 
+<!-- <div id='intro-flex-container'> 
 <div id='intro-flex-container-2'> 
 <p>
     Graphene is a two dimensional hexagonal arrangement of carbon atoms. It has the unique properties of having an energy band structure that's linear rather than parabolic (at "low" energies) and is a zero-gap semiconductor. These two properties lead to a resistivity versus gate voltage curve that exhibits a sharp peak for undoped graphene at zero gate voltage (\(V_G\)) that then slopes down towards zero as \(V_G\) increases/decreases.
@@ -255,65 +258,10 @@ To experimentally verify this behavior, we fabricated a graphene field effect tr
     </figcaption>
     </figure> 
 </div>
-</div> 
+</div>  -->
 
 
-<div id = 'Preparation2'>
-        <h2>
-            Background Information
-        </h2>
-        <h4>
-            Field Effect Transistor 
-        </h4>
 
-        <h4>
-            Graphene 
-        </h4>
-        <p>
-            Proper monolayer graphene is a two dimensional, single layer of hexagonal honeycomb arrangement of carbon atoms. Due to this structure, graphene has some significant electronic properties such as high electron mobility on the order of 15,000 cm\(^2\)/Vs. Additionally, graphene is a semiconductor with zero-gap between the valence and conduction band (which in this case would make it more like a metal).
-        </p> 
-        <p>
-            The energy-momentum dispersion relation takes the linear form
-            $$
-                E = \hbar k c_* \qquad c_* \approx 10^6\text{m/s}
-            $$
-            akin to the dispersion relation for relativistic massless particles like photons for low energies near the Dirac points, the points where the valence and conduction bands meet. We can see that the typical parabolic bands are to first order replaced by linear cones, illustrating the linear energy-momentum dispersion relation. 
-            <!-- \begin{figure}[H]
-                \centering
-                \includegraphics[scale=0.3]{Intro/graphene_band_structure.png}
-                \caption{Band Structure Graphene with emphasis on Dirac Points \cite{Castro}}
-                \label{fig:graphene_band_struc}
-            \end{figure} -->
-        </p>
-        <p> 
-            Likewise for low energies, from the linear energy momentum dispersion relation, the density of states as a function of energy is given approximately by \(\rho(E) \propto |E|\) <!--\cite{Novoselov}-->. Since the number density of carriers is given by
-            $$
-                n = \int_{-\infty}^E \rho(E)F(E)\,dE
-            $$
-            where \(\rho\) is the density of states and \(F(E)\) is the Fermi-Dirac distribution, as the Fermi energy sweeps through the conduction and valence bands, the cone shapes indicate that the number of charge carriers (holes for the valence band and electrons for the conduction band) will decrease as the Fermi energy approaches the Dirac points and increase as it moves further away.
-        </p>
-
-        <h4>
-            Graphene FET 
-        </h4>
-        <p>
-            A graphene field effect transistor is a field effect transistor where the channel is replaced with a sample of graphene. 
-        </p>
-        <p>
-            When we apply a voltage to the gate, the electric field effect shifts the position of the Fermi energy by inducing a doping of electrons or holes in the graphene. The number of available states will in turn increase as the Fermi energy moves away from the Dirac points which increases the conductivity. Conversely, as the Fermi energy approaches the Dirac point, the number of states in principal approaches zero which means that the conductivity goes towards zero, or equivalently the resistance increases to infinity. 
-            
-            <!-- This idea is visualized in Figure \ref{fig:resistivity_curve} which gives the resistivity as a function of applied gate voltage which demonstrates a sharp peak \cite[pg. 667]{Novoselov} -->
-            
-            For few-layer graphene, the resistivity tends towards the order of 100 ohms for high gate voltage and tends towards orders of kilo-ohms as the resistivity approaches its peak [Novoselov].
-        </p>
-        <p>
-            A model describing this effect is presented in Novoselov et. al where the graphene is treated as a two dimensional metal with the conductance band and valence bands overlapping. When a gate voltage \(V_G\) is applied, the subsequent electric field induces a charge density \(n\) in the graphene where <i>n</i> is given by 
-            $$
-                n = \frac{\varepsilon_0 \varepsilon V_G}{te}
-            $$
-            with \(\varepsilon_0, \varepsilon\) are the permitivities of free space and Si\(\text{O}_2\), <i>e</i> is the charge of the electron, and <i>t</i> is the depth of the insulating layer. As \(V_G\) goes towards zero, <i>n</i> goes to zero and hence the resistivity increases towards infinity. Likewise, as \(V_G\) increases or decreases further away, <i>n</i> increases and the resistivity will instead decrease. 
-        </p>
-</div>
 
 
 

@@ -1,0 +1,42 @@
+--- 
+layout: default 
+title: Vinh Tran 
+css: /assets/css/text.css
+--- 
+
+<!-- Template for blog posts or any sort of text based post:
+	- Includes shifted main body of text for sidebar implementation 
+	Not sure why, but children from this template require css specification as well. 
+-->
+<div id="main">
+    <div class="inner">
+        <header>
+            <h1>
+                {{page.topic}}
+            </h1>
+        </header>
+
+		<nav class="toc">
+			<ul>
+				{% for i in (0..page.section.size) %}
+				<li><a href="#{{page.section[i]}}">{{page.section[i]}}</a>
+
+				<!-- <ul>
+					{% for subsection in page.subsection[i] %}
+					<li><a href="#{{subsection}}">{{subsection}}</a></li>
+					{% endfor %}
+				</ul> -->
+				</li> 
+				{% endfor %}
+			</ul>
+		  <svg class="toc-marker" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+			<path stroke="#444" stroke-width="3" fill="transparent" stroke-dasharray="0, 0, 0, 1000" stroke-linecap="round" stroke-linejoin="round" transform="translate(-0.5, -0.5)" />
+		  </svg>
+		</nav>
+		
+        {{ content }}
+    </div>
+</div>
+
+
+			

@@ -1,13 +1,19 @@
 --- 
 layout: default 
-title: Vinh Tran
-header: Past and Current Work
-css: assets/css/main.css
+title: Vinh Tran 
+css: assets/css/text.css
 --- 
+<!-- this shows that we can indeed specify a particular css page -->
 
 <!-- Main -->
 <div id="main">
     <div class="inner">
+        <header>
+            <h1>
+                Past and Current Work
+            </h1>
+        </header>
+
         <section class="tiles">
 
             {% for portfolio_item in site.portfolio %}
@@ -16,7 +22,7 @@ css: assets/css/main.css
                 <span class="image">
                     <img src="{{ portfolio_item.image_path}}" alt="" />
                 </span>
-                <a href="{{ portfolio_item.link_path}}">
+                <a href="{{ portfolio_item.path }}">
                     <h2>{{ portfolio_item.title }}</h2>
                     <div class="content">
                         <p> 

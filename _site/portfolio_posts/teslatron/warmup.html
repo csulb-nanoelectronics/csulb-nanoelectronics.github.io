@@ -135,7 +135,16 @@
 		  </svg>
 		</nav>
 		
-        <div id= "Background">
+        <p> 
+CSULB Department of Physics and Astronomy <br> 
+Hall of Science Room 263 <br> 
+Supervisor: Dr. Claudia Ojeda-Aristizabal <br> <br> 
+Author: Vinh Tran <br> 
+Last Reviewed: Jan. 05, 2023
+
+</p>
+
+<div id= "Background">
     <h2>
         Background
     </h2>
@@ -146,7 +155,7 @@
      For annual maintenance on the various cryostat filters, tip seals of the circulation pump, and zeolite trap. 
             </li>
             <li>
-                In the event of a power outage or HVAC outage and the compressor and chiller are no longer functioning to keep the cryostat at base temperature ~1.45 K leading to an uncontrolled warm up of not only the sample space but also the pulse tubes and magnet. In the case where the outage has been for a few hours or more and the temperature has risen significantly, it is a good idea to warm up the entire system before cooling back down once the issue has been solved. 
+                In the event of a power outage or HVAC outage and the compressor and chiller are no longer functioning to keep the cryostat at base temperature ~1.45 K leading to an uncontrolled warm up of not only the sample space but also the pulse tubes and magnet. In the case where the outage has been for a few hours or more and the temperature has risen significantly, it is possible for there to be a loss in vacuum and subsequent contamination of the circulating Helium. 
             </li>
         </ul>
     </p>
@@ -168,6 +177,35 @@
     </p>
 </div>
 
+<div id = "Preparation">
+<h3>
+    Preparation for Warm Up 
+</h3>
+This procedure is given in the TeslatronPT system manual beginning on page 51. 
+<ol>
+    <li>
+    Ramp the magnet to zero field and turn off the magnet switch heater. Cool the VTI to base temperarure and check that the PT2 and magnet temperatures are normal (below 4K). 
+    </li>
+    
+    <ol>
+        <li>
+        To do this, go to the Mercury iPS-M controller (the second box). Navigate the on screen display to return to the home menu. It should appear as in. 
+        </li>
+        <li> If the field value is reading $T \sim 0.00001 - 0.00004$, then the field is already set to zero. Else, select the ``to zero'' button on the bottom right of the iPS home menu which will ramp the magnet to zero field. Wait until it reads zero before proceeding. </li> 
+        <li>
+            If the ``switch heater'' button is ``blued out'' then the switch heater is off and we can proceed. Else if it is orange (and says on), then it is on. Press it to turn it off. 
+        </li>
+    </ol>
+    <b> Warnings </b> <br> 
+<p> 
+If the magnet is energized (ie, it has a non-zero field or current running through it), do not turn off the switch heater until the magnet has been ramped down to zero first, else the magnet can undergo a quench. A quench occurs when the temperature of the magnet exceeds its superconducting transition temperature and becomes resistive; this coupled with the typically large amount of current running through the coils leads to a lot of heat/energy being suddenly dissipated. To protect itself, the magnet will then 
+</p>
+<br> 
+</ol>
+</div>
+
+
+
 
 <div id='intro-flex-container'> 
 <div id='intro-flex-container-2'> 
@@ -188,7 +226,7 @@ To experimentally verify this behavior, we fabricated a graphene field effect tr
 </div> 
 
 
-<div id = 'Preparation'>
+<div id = 'Preparation2'>
         <h2>
             Background Information
         </h2>

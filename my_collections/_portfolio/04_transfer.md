@@ -1,7 +1,7 @@
 ---
 style: style1
 image_path: images/transferstation.jpeg
-link_path: /dft.html
+link_path: /portfolio_posts/transfer_station.html
 title: Transfer Station
-caption: Transfer Station
+caption: Transfer to perform heterostructures
 ---

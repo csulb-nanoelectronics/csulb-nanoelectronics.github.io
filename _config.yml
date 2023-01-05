@@ -38,7 +38,10 @@ collections:
   qm1_problemsets:
   qm2_problemsets:
   dft:
-  teslatron: 
+  teslatron:
+  evaporator:
+  sem:
+  furnace: 
 
 # Build settings
 theme: minima

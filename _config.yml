@@ -40,8 +40,8 @@ collections:
   dft:
   teslatron:
   evaporator:
-  sem:
-  furnace: 
+  scanning:
+  furnace:
 
 # Build settings
 theme: minima

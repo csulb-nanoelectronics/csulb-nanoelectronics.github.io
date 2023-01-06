@@ -15,8 +15,9 @@ Hall of Science Room 261 <br>
 Supervisor: Dr. Claudia Ojeda-Aristizabal <br> <br> 
 Author: Maya Martinez <br> 
 Last Reviewed: Jan. 05, 2023
-
 </p>
+
+
 
 <div id= "Preparing Sample for Lithography">
     <h2>
@@ -42,6 +43,9 @@ Last Reviewed: Jan. 05, 2023
     </p>
 </div>
 
+
+
+
 <div id = "Preparing for Lithography at the SEM">
     <h2>
         Preparing for Lithography at the SEM
@@ -54,9 +58,8 @@ Last Reviewed: Jan. 05, 2023
                 Fig. 1 Computer and scanning electron microscope set up. <br>
             </figcaption>
         </div>
-        <div id = "flex_item_1"> 
+        <div id = "flex_item_1">
         <p>
-            <br> 
             Now the excitement begins!
             <ol>
                 <li>
@@ -76,248 +79,296 @@ Last Reviewed: Jan. 05, 2023
                         </li>
                     </ul>
                 </li>
+                <li>
+                    The system should be pumped. Click the <b> Pump </b> button in the top right corner of the window, see Fig. 3(b). To check the status of the chamber, look to the bottom right corner of Fig. 3(a). The square at the bottom right corner will appear red if vented. If the chamber is already vented, proceed to the next step. 
+                </li>
+                <div id = "resistivity_container"> 
+                    <div class = 'resistivity'> 
+                        <img src='/images/sem/ebl/fig3.png'>
+                        <figcaption>
+                            Figure 3: Checking chamber status prior to sample loading. (A) Status box indicating pressure <br> of chamber and filament statuses.
+                            (B) Buttons used to vent and pump the chamber outlined in red. <br>
+                        </figcaption>
+                    </div>
+                    <br> 
+                
+
+                <li>
+                    Put on gloves, and then open the chamber door. Place the puck on the SEM stage, orienting it such that the Faraday cage is pointing away from you, see Fig. 4.
+                </li>
+
+
+
+                <li>
+                    Close the chamber door and click the <b>Pump</b> button, directly to the left of the <b>Vent</b> button. To help the pumps create a vacuum seal, hold pressure to the door until the pressure inside the chamber begins to drop. The pressure is shown in the same status panel at the bottom right-hand side of the screen, see Fig. 5 (a).
+                    <ul>
+                        <li>
+                            The chamber will reach vacuum once the colored square indicator turns green. As of July 2022, it is recommended to wait until the pressure reaches at least \(2.0 \times 10^{-5}\) mbar before continuing. This may take a few minutes.
+                        </li>
+                    </ul>
+                </li>
+
+
+
+                <li>
+                    After reaching base pressure and making sure the bottom right panel is not paused, we can bring the platform up. We do so by holding down the middle mouse wheel and moving the mouse upwards. The higher you move the mouse, the faster the stage moves. You’ll want to move the stage up to the yellow marker in the camera panel. This indicates 10mm from the objective, see Fig.5(b). Once again, be cautious as you could drive the stage into the objective!
+                </li>
+
+
+                <li>
+                    Now we may turn on the HV. Before doing so, check that the HV is set to 30.0 kV and the spot size to 3, see Fig. 5 (c). When ready, click on <b>HV</b>.
+                </li>
+
+
+
+                <li>
+                    We should now be able to see the silver paste. We’ll first want to make a clear image of the paste. First focus the image, and then zoom in and focus in stages until you get a clear image at a minimum of ∼ 5.0 μm. 
+                    <ol>
+                        <li>
+                            To zoom, use the magnification knob directly below the comput- ers, see Fig. 6 (a). To know how zoomed in you are, there is a scale bar at the bottom of the image panel as shown in Fig. 6 (b).
+                        </li>
+                        <li>
+                            To focus you can either use the Coarse and Fine knobs adjacent to the magnification knob, or drag and right-click the mouse side to side to focus.
+                        </li>
+                    </ol>
+                </li>
+
+
+
+                <li>
+                    Once we have a clear picture of the silver paste, we can set the working distance. The working distance is how far away the beam is focused and thus needs to correspond to the distance between the stage and the objective when everything is in focus. We typically want this distance to be 7mm. To set the working distance, first navigate to the <b>Work</b> panel in the top right corner, look for a purple gear as shown in Fig. 7 (a). Under the stage panel in the <b>Work</b> panel, click on Coordinates shown in Fig. 7 (b). Now click on the <b>Couple Z to FWD </b> icon on the top left bar directly under <b>Scan</b>. The <b>Couple Z to FWD </b> icon is an objective with a red arrow going through it, see Fig.7(c). Now that the distance is coupled, we set our working distance to 7 mm by changing the z-value in the <b>Coordinate</b> panel. Before changing the distance make sure the <b>Absolute</b> button is activated, NOT the <b>Relative</b> one! This is underlined in Fig. 7 (b). When setting the distance, again be at the ready with the ESC button just in case the stage gets too close to the objective.
+                </li><br> 
+
+
+                <li>
+                    After setting the working distance, navigate over to the Faraday cage. To move the stage, its best to zoom out and then click on the image where you want to go. Be careful not to zoom out too far, you don’t want to accidentally expose your sample. Center the image above the hole of the Faraday cage and zoom in as much as possible. The Faraday cage is shown in Fig. 8 (a).
+                </li><br> 
+
+
+
+                <li>
+                    We want to measure the current for different spot sizes. Although we use the same spot sizes for each session, the measured currents for each size will vary from session to session. First blank the beam by clicking on the icon directly below the Help drop down menu. You will know the beam is blanked when the image disappears. With the Keithley 6485 Picoammeter on, press the ZCHK button, see Fig. 8 (b). The picoammeter sits directly below the SEM computer display, as shown in Fig. 1. When we press the ZCHK button, it sets the reading of the picoammeter to zero. Un-blank the beam and set the spot size to 3.0. To change the spot size, see Fig.5(c). Take note of the spot size and the values read by the picoammeter in the SEM notebook. Do this for each spot size up to 6.0. The units read from the picoammeter will be in nano-amps, however the run file for the NPGS will need it in pico-amps.
+                </li><br> 
+
+
+                <li>
+                    With each change of the spot size, the fine focusing is lost. It is worth revisiting the silver paste and refocus before navigating to the sample.
+                </li>
+            </ol>
+        </p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div id = "Performing Lithography at the SEM">
+    <h2>
+        Performing Lithography at the SEM
+    </h2>
+
+    <div id = "resistivity_container"> 
+        <div id = "flex_item_1">
+        <p>
+            <ol>
+                <!-- Step 1 -->
+                <li>
+                    First we need to align the wafer, navigate to one of the large letter markers, e.g. A1 or H1, at the bottom of your wafer. To align the wafer we will use the <b>Alignment Wizard</b> feature located under the Stage drop down menu, see Fig. 9 (a). This feature will rotate the stage such that the markers are properly aligned parallel to the horizon. Follow the steps provided by the <b>Alignment Wizard</b> and when choosing two points, its best to select two small markers several spaces apart. To make sure the alignment rotates the sample the correct way choose points from left to right, shown in Fig. 9 (b). NOTE! Before proceeding with the alignment, make sure to blank the beam because the whole stage will rotate as soon as you begin. Blanking the beam ensures you don’t accidentally expose your sample. The beam blank icon is shown in Fig. 9 (b).
+                    <ul>
+                        <li>
+                            Often, you may need to align the wafer a couple times before proper alignment is achieved. A good trick is to use the edges of the viewing window as reference to check if the alignment was successful.
+                        </li>
+                    </ul>
+                </li>
+        <div id = "resistivity_container"> 
+        <div class = 'resistivity'> 
+                    <img src='/images/sem/ebl/fig9.png'>
+                    <figcaption>
+                        Figure 9: (A) Locating the Alignment Wizard feature. (B) Demonstration of the direction <br>  and order of point selection for alignment, indicated by the red arrow. The beam blanker <br> icon is outlined in red.
+                    </figcaption>
+        </div>
+        </div><br>
+
+
+                <!-- Step 2 -->
+                <li>
+                    Once aligned, un-blank the beam to recover the image.
+                </li>
+
+
+
+                <!-- Step 3 -->
+                <li>
+                    Navigate to your sample’s origin (originally set in the CAD design.) When moving the stage, make sure to blank the beam so that you don’t expose the wafer. There are two ways you can navigate to your sample:
+                    <ul>
+                        You can move the stage using the coordinates panel previously used when setting the working distance. Now, instead of using Absolute click on Relative, see Fig. 7. This will move the stage relative to your current position. Input the x and y values to nav- igate to your origin, make sure to take note of the units. Some- times the micro-manipulators drift, if the drift consistently leads you astray use the following technique:
+                    </ul>
+                    <ul>
+                        You can manually shift the stage using the micro-manipulators on the door of the SEM, see Fig. 1. Make sure to keep track of how far you have moved.
+                    </ul>
+                </li>
+
+
+
+                <!-- Step 4 -->
+                <li>
+                    Once at the origin of your design, blank the beam and click on Ex- ternal under the Scan drop down menu, see Fig. 10 (a). Next flip the switch to turn on the external beam blanker, directly to the right of the picoammeter, see Fig. 10. Lastly, turn the dial to external: EXT.
+                </li>
+
+
+
+                <!-- Step 5 -->
+                <li>
+                    Now we need to prepare the run file. Using either a past run file or template, open the file by clicking <b>Run File Editor</b> to the left in the NPGS menu, see Fig. 11.
+                </li>
+
+
+                <li>
+                    First we edit the parameters for the alignment windows under the <b>Alignment</b> entity type, the first box shown in Fig.12. Upload the correct CAD design by double clicking on the pattern name and locat- ing the appropriate design CAD file. For this entity type we’ll only be editing the first four layers, i.e. layers 2-5. Each of these layers should have selected Window in the first drop down menu, the rest of the layers should show Skip. All of the windows’ layers will have the same following parameters shown in Table 1 and Fig. 12 (a).
+                </li>
+
+
+                <li>
+                    Next, we edit the Pattern entity type, directly below the Alignment entity type, shown in Fig. 12 (b). Like before, make sure to load in the correct CAD design file by clicking on the pattern name and choosing the correct file. The first 8 layers should all read Skip. Layers 10, 11, and 12 should all read Pause First. Each of these layers will have their own set of parameters:
+                </li>
+
+                
+                <div id = "resistivity_container"> 
+                    <div class = 'resistivity'> 
+                                <img src='/images/sem/ebl/table2.png'>
+                                <figcaption>
+                                    Figure 13: Locating the Error Check Mode from the NPGS main menu.
+                                </figcaption>
+                    </div>
+                    </div><br>
+
+
+                <li>
+                    Save the run file with a distinct name by navigating to the File drop down menu and selecting Save as, making sure to choose a name informative of the lithography being performed.
+                </li>
+
+
+
+                <li>
+                    Highlight the run file by clicking on it. Run Error Check Mode under the Commands /Process Run File... drop down menus, see Fig. 13. This feature simulates the lithography, checking if it will run without error.
+                </li>
+
+                <div id = "resistivity_container"> 
+                    <div class = 'resistivity'> 
+                                <img src='/images/sem/ebl/fig13.png'>
+                                <figcaption>
+                                    Figure 13: Locating the Error Check Mode from the NPGS main menu.
+                                </figcaption>
+                    </div>
+                    </div><br>
+
+                <li>
+                    Once everything checks out, under the Custom Commands section of the NPGS menu click on Set WD=7mm to set the working distance to 7 mm and then click on NPGS Mode, see Fig. 14. Selecting NPGS Mode will allow NPGS to take over the SEM.
+                </li>
+
+                <div id = "resistivity_container"> 
+                    <div class = 'resistivity'> 
+                                <img src='/images/sem/ebl/fig14.png'>
+                                <figcaption>
+                                    Figure 14: Setting the working distance to 7mm and allowing <br> 
+                                    the NPGS software to interface and control the SEM via the <br>
+                                    NPGS Mode setting.
+                                </figcaption>
+                    </div>
+                    </div><br>
+
+                <li>
+                    Check that your spot size and magnification are appropriate, they should respectively be 3 and 1000.
+                </li>
+
+
+                <li>
+                    Now we can start by clicking Process Run File!
+                </li>
+
+
+                <li>
+                    Four windows should appear corresponding to the four windows from the CAD design. Here, we want to adjust the windows so that the markers are fully visible and within the window. Certain keys will create a better picture, enlarge the windows, or change the scan rate. When you’re happy with the placement and alignment of the windows press Enter on your keyboard. Note, sometimes markers will not be visible if they are next to some thick features as the images are contrast based. Below are important keys and their actions:
+                    <ul>
+                        <li>
+                            P: makes windows larger
+                        </li>
+                        <li>
+                            A: auto-contrast
+                        </li>
+                        <li>
+                            space-bar: re-scans
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li>
+                    Once the windows are aligned, NPGS will ask if you want to recalculate the matrix, select yes.
+                </li>
+
+
+                <li>
+                    Before hitting the space-bar to continue for each layer, make sure to change and update the spot-size and magnification because the program will not automatically update it.
+                </li>
+
+
+                <li>
+                    Once completed, click on SEM Mode in the NPGS menu to return control to the SEM computer. Quickly blank the beam and turn off the beam as to not over expose your sample.
+                </li>
+
+
+                <li>
+                    Turn the dial back to OFF, and flip the switch back on the external beam blanker. Lastly, under Scan select Full Frame.
+                </li>
+
+                <li>
+                    Make sure the chamber camera is not paused, and then home the stage. Afterwards you may vent the chamber and pull out the puck and sam- ple.
+                </li>
+
+
+                <li>
+                    Leave the chamber vented and log out of the program by clicking STOP UI in the top right corner. Make sure to leave the SEM com- puter on but log off the NPGS computer.
+                </li>
+
+
             </ol>
         </p>
     </div>
     </div>
 </div>
 
-<!-- <div id = "Preparation">
-<h3>
-    Preparation for Warm Up 
-</h3>
-This procedure is given in the TeslatronPT system manual beginning on page 51. 
-<ol>
-    <div id='intro-flex-container'> 
-    <div id='intro-flex-container-2'> 
-    <li>
-    Ramp the magnet to zero field and turn off the magnet switch heater. Cool the VTI to base temperature (~ 1.45 K) and check that the PT2 and magnet temperatures are normal (below 4K). In the event where cooling is not fully 
-    </li>
-    </div>
-    <div class = "neutron_pic">
-    <figure><img src='/images/teslatron/warmup/control.jpeg'>
-    <figcaption>
-        Controllers for the cryostat. The second box is the iTC, which controls . The third box is the iPS, which controls the various parameters for the magnet. 
-    </figcaption>
-    </figure> 
-    </div>
-    </div> 
-    
-    <ol>
+
+
+
+<div id = "Developing Sample After Lithography">
+    <h2>
+        Developing Sample After Lithography
+    </h2>
+
+    After exposing the positive tone, electron resist at the SEM, we must develop the lithography using a solution of IPA and MIBK. <br>
+    <ol><br>
         <li>
-        To do this, go to the Mercury iPS-M controller (the second box). Navigate the on screen display to return to the home menu. It should appear as in. 
-        </li>
-        <li> If the field value is reading $T \sim 0.00001 - 0.00004$, then the field is already set to zero. Else, select the ``to zero'' button on the bottom right of the iPS home menu which will ramp the magnet to zero field. Wait until it reads zero before proceeding. </li> 
+            If there is no more MIBK:IPA solution, create more using a 1:3 ratio.
+        </li><br>
         <li>
-            If the ``switch heater'' button is ``blued out'' then the switch heater is off and we can proceed. Else if it is orange (and says on), then it is on. Press it to turn it off. 
+            Place exposed wafer in MIBK:IPA solution for 25 seconds (time may vary).
+        </li><br>
+        <li>
+            Wash sample in IPA for 25 seconds, and then dry off with compressed air.
         </li>
     </ol>
-    <b> Warnings </b> <br> 
-<p> 
-If the magnet is energized (ie, it has a non-zero field or current running through it), do not turn off the switch heater until the magnet has been ramped down to zero first, else the magnet can undergo a quench. A quench occurs when the temperature of the magnet exceeds its superconducting transition temperature and becomes resistive; this coupled with the typically large amount of current running through the coils leads to a lot of heat/energy being suddenly dissipated. To protect itself, the magnet will then 
-</p>
-<br> 
-</ol>
-</div> -->
 
 
 
 
-<!-- <div id='intro-flex-container'> 
-<div id='intro-flex-container-2'> 
-<p>
-    Graphene is a two dimensional hexagonal arrangement of carbon atoms. It has the unique properties of having an energy band structure that's linear rather than parabolic (at "low" energies) and is a zero-gap semiconductor. These two properties lead to a resistivity versus gate voltage curve that exhibits a sharp peak for undoped graphene at zero gate voltage (\(V_G\)) that then slopes down towards zero as \(V_G\) increases/decreases.
-</p> 
-</p> 
-To experimentally verify this behavior, we fabricated a graphene field effect transistor (FET) and measured the resistivity of the graphene channel as a function of the gate voltage. We fabricated two graphene FETs and performed back gate resistivity measurements and found that for one sample (3A) that there may be a resistivity dependence on \(V_G\) that weakly agrees with the expected behavior although curve appears to be broadened and our data is overall noisy. We then discuss the possible reasons: gate leakage in our samples, non ideal graphene samples, 
-</p>
-</div> 
-<div class = "neutron_pic">
-    <figure><img src='/images/FET.JPG'>
-    <figcaption>
-        Microscope image of completed transistor post photolithography, deposition, and liftoff with the graphene sample at the center of the "crosshairs"
-    </figcaption>
-    </figure> 
 </div>
-</div>  -->
-
-
-
-
-
-
-<div id = 'Fabrication'>
-    <h2>
-        Fabrication
-    </h2>
-
-    <h4>
-        Exfoliation of Highly Oriented Graphite (with Scotch tape!)
-    </h4>
-    <div id = "exfoliation"> 
-    
-    <div>
-        <p>
-            We prepared rectangular wafers approximately 1.5 cm by 2 cm in size from a 3 inch diameter silicon wafer marked with a grid of letters and numbers which allows for recalling the location of graphene samples. The silicon wafer consists of highly doped silicon (Si++) with a thin surface coat of silicon dioxide (SiO2) which acts as a dielectric. We made the cuts by scoring the wafers with a diamond tipped pen to then break the wafer along the scored lines using a small wire taped to a flat surface as a fulcrum.
-        </p>
-        <p>
-            Once washed, we exfoliated graphenium graphite, a type of highly oriented pyrolytic graphite which lends itself to exfoliation, onto the sample via the Scotch tape method where we loaded flakes of graphenium and pressed and distributed the graphite in scotch tape the goal of which is to lift and distribute layers of graphite and hopefully achieve an incredibly thin layer. After distributing the graphite we then place our wafer, face side down, into the tape as to transfer the graphite onto the wafer.
-        </p>
-        <p>
-            Lastly, we looked for samples of graphene using a microscope, searching for patches with a color similar to the substrate, that is, a color that is a darker blue to purple. Though ideal candidates would appear nearly transparent.
-        </p>
-    </div>
-    <figure>
-        <img src = "/images/Graphene/sample.JPG">  
-        <figcaption>
-        </figcaption>
-    </figure>
-    </div>
-
-    <h4>
-        Photolithography
-    </h4>
-    <p>
-        The next process involved photolithography which prints a gold-titanium circuit onto the wafer with the graphene sample at the center of the circuit. All of the following steps takes place in a room with a special filter that filters out UV light. 
-    
-
-    
-    <ol>
-    <li> First, we applied a coating of (positive) photoresist, a light sensitive chemical that becomes soluble to the developer after being exposed to ultraviolet light, to the wafers which took place in three stages.  </li> 
-    <ul>
-
-        <li>First, we placed our wafer into the spin-coat machine, applying a vacuum seal to hold the wafer in place and applied 3 drops of primer to fully coat the wafer. Then we set the machine to run at 4000 rotations per minute (rpm) for 40 seconds. </li>
-        <li>Next, we applied 3 drops of photoresist to the wafer and ran the machine at 7000 rpm for 60 seconds. </li>
-        <li>Finally, we soft baked the wafer on a hot plate at 80\(^\circ\)  C for two minutes as to stabilize the photoresist for easier handling in the next mask-aligning and exposure step.
-        </li>
-
-    </ul>
-
-    
-    <li>Next, we aligned a mask with a circuit pattern over our graphene sample and exposed the wafer to ultraviolet (UV) light. The UV light makes the photoresist soluble to the developer so that in the developing step, the parts of the wafer not covered by the mask will wash off exposing the silicon dioxide wafer substrate. </li>
-    
-        <ul>
-            <li>We loaded the wafer into the mask aligner and located the general location of the graphene sample using the gold letter and number markings on the wafer.</li>
-            <li>We loaded the mask into the holder which uses a vacuum to hold the mask in place. Keeping one hand underneath the mask, in the case of vacuum failure, we inserted the mask into the aligner above the sample. </li>
-            <li>Next, we aligned the graphene sample with a finer circuit pattern using a combination of coarse lever controls which move the objectives and fine levers which move the stage in the X and Y directions.</li>
-           <li>After having aligned the graphene sample into the center of the circuit pattern, we expose the wafer to UV light for 4.25 seconds.</li>
-        </ul>
-    
-    
-    
-    <p>
-
-     <li>Next, we developed the wafers which allowed for the exposed photoresist to be washed off and harden the remaining photoresist.  This step took place in three stages. </li>
-     <ul>
-            <li> 
-         First, we placed the wafers into a dish with developer for 50 seconds. The developer used was diluted from the original concentration with milli-q water using a ratio of 1 part original developer to 6 parts milli-q water.</li>
-        <li>
-        After that, we rinsed the wafers in de-ionized water for 40 seconds before drying the samples using jets of air. </li>
-        <li> 
-        Then we hard baked the sample at 100$^\circ$ C for two minutes which solidifies the non-exposed photoresist. </li>
-    </ul>
-    </p>
-    </ol>
-
-
-    </p>
-
-    <h4>
-        Deposition
-    </h4>
-    <div id = "main_body"> 
-    <p>
-        Next, we evaporated 4 nm of titanium and afterwards 40 nm of gold onto the wafers. The specific evaporator used is an electron beam evaporator. First, the samples are loaded via retaining pins into a dish which is then attached into the interior of the evaporator and small amounts of titanium and gold are loaded into their respective crucibles. The evaporator is then closed and a vacuum is applied. Then, via a tungsten filament, beam of electrons is sent towards the crucibles heating the metals up and turning them into vapors which then condense and form a thin film onto the wafer. 
-    </p>
-        <div id="side_by_side_smaller"> 
-            <figure>
-                <img src = "/images/Graphene/evaporator.jpeg"> 
-                <figcaption>
-                    Electron beam evaporator opened up
-                </figcaption>
-            </figure>
-            <figure>
-                <img src = "/images/Graphene/post_deposition.jpeg"> 
-                <figcaption>
-                    Wafers post deposition! How shiny! 
-                </figcaption>
-            </figure>
-            <figure>
-                <img src = "/images/Graphene/crucible.jpeg"> 
-                <figcaption>
-                    The crucible where gold pellets are loaded in. 
-                </figcaption>
-            </figure>
-        </div>
-    </div>
-    <p>
-    </p>
-
-    <h4>
-        Lift Off
-    </h4>
-    <div id = "main_body_right_image">
-    <p>
-        Lastly, we perform the lift off wash for the wafers which removes the irrelevant gold, that is, the gold that lays on top of the photoresist, without removing the gold that forms the electrodes. As the photoresist used in this lab is acetone soluble, the lift off wash consists of placing the wafers into a dish of acetone which starts to eat away the photoresist. Then using a syringe, we applied more pressurized jets of acetone to encourage removal of more stubborn bits of gold.
-    </p>
-    <figure>
-        <img src="/images/Graphene/acetone_needle.jpeg"> 
-    </figure>
-    </div>
-</div>
-
-<div id = 'Measurement'>
-    <h2>
-        Measurement 
-    </h2>
-
-    <h4>
-        Lock In Amplifier 
-    </h4>
-</div>
-
-
-
-
-<div id = 'Data Analysis'>
-    <h2>
-        Data Analysis
-    </h2>
-
-    <p>
-        Our goal was to measure the resistivity of the graphene FET as a function of applied gate voltage. After making corrections to our samples (after initial poor measurements), we got the following data, which we take and analyze using Python. 
-    </p>
-
-    <h4>
-        Curve Fitting
-    </h4>
-
-    <div id = "resistivity_container"> 
-        <div id = "flex_item_1"> 
-        <p>
-            Since resistivity versus gate voltage plot for graphene was expected to exhibit a shark peak around the Fermi energy, we tried to fit a "peak" function to the data. We ended up choosing a Lorentzian function, although a Gaussian could work as well (or even a Voigt function which is a convolution of a Gaussian and a Lorentzian). That is, we used a function of the following form
-            $$
-                L(x) =
-                \frac{1}{\pi}
-                \frac{\frac{1}{2}\Gamma}{(x-x_0)^2 + (\frac{1}{2}\Gamma)^2} + h
-            $$
-            with \(\Gamma, x_0, h\) as fittable parameters and fitted it to the scattered points by minimizing the mean square error. In particular, we loaded in the data, which we have stored in CSV form from our LabView output as a <code>Pandas DataFrame</code>. Extracting the array data we then use <code>scipy.optimize.curve_fit</code> to find the parameters that best fit the data and then plot the resulting graphs with <code>Matplotlib.pyplot</code>. 
-        </p>
-    </div>
-        <div class = 'resistivity'> 
-            <img src="/images/Graphene/resistivity.png">
-        </div>
-    </div>
-</div>
-
-
-
-<div id = 'Troubleshooting'>
-    <h2>
-        Troubleshooting 
-    </h2>
-</div>
-
-<h2>
-    References
-</h2>

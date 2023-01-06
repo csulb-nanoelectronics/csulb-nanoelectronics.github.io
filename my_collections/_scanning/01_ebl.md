@@ -1,6 +1,6 @@
 ---
 style: style1
-image_path: /images/sem/lithography.jpg
+image_path: /images/scanning/lithography.jpg
 path: generic.html 
 link_path: /portfolio_posts/sem/ebl.html
 title: Electron Beam Lithography

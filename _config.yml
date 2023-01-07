@@ -42,6 +42,7 @@ collections:
   evaporator:
   scanning:
   furnace:
+  transfer:
 
 # Build settings
 theme: minima

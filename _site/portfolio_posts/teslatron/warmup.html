@@ -221,9 +221,66 @@ This procedure is given in the TeslatronPT system manual beginning on page 51.
 
 
 <!-- Step 2 --> 
-<b><br><br> 
-    Step 2. Close the zeolite trap inlet valve (see Figure 17) so that the pure helium gas charge is returned to the storage tank by the circulation pump. 
-</b>
+<div id = "resistivity_container"> 
+    <div id = "flex_item_1"> 
+        <b><br><br> 
+            Step 2. Close the zeolite trap inlet valve (see Figure 2) so that the pure helium gas charge is returned to the storage tank by the circulation pump. 
+        </b>
+        <ul>
+            <li>
+                By closing this inlet valve, the Helium in the VTI circuit is unable to pass through the zeolite trap (and return via the zeolite trap exit valve and into the cryostat via the NW16 return line valve at the top of the cryostat) and instead is directed into the helium storage tank at the top of the cart. 
+            </li>
+        </ul>
+    </div>
+    <div class = "resistivity">
+        <img src='/images/teslatron/warmup/cart.jpeg'>
+        <figcaption>
+            Fig 2. Pictured are the zeolite trap (cylindrical object with cord emerging from top in center of image)<br>  with various adjacent valves. Immediately to the right of the trap is the NW16 zeolite trap inlet valve <br> to be closed  by turning fully  to the right in Step 2. 
+        </figcaption>
+    </div>
+</div>
+<br><br> 
+<ul>
+    <li>
+        <b>
+            Note!
+        </b><br>
+        At this stage, the valves should be as follows
+        <ul>
+            <li>
+                NW16 Zeolite Trap Inlet Valve: Closed 
+            </li>
+            <li>
+                NW16 Zeolite Trap Exit Valve: Open 
+            </li>
+            <li>
+                NW16 Zeolite Trap Pump Out Port: Closed 
+            </li>
+            <li>
+                NW16 Pump and Flush Valve: Closed 
+            </li>
+        </ul>
+    </li>
+</ul>
+
+
+<!-- <div id = "resistivity_container"> 
+    <div id = "flex_item_1"> 
+    <p>
+        Since resistivity versus gate voltage plot for graphene was expected to exhibit a shark peak around the Fermi energy, we tried to fit a "peak" function to the data. We ended up choosing a Lorentzian function, although a Gaussian could work as well (or even a Voigt function which is a convolution of a Gaussian and a Lorentzian). That is, we used a function of the following form
+        $$
+            L(x) =
+            \frac{1}{\pi}
+            \frac{\frac{1}{2}\Gamma}{(x-x_0)^2 + (\frac{1}{2}\Gamma)^2} + h
+        $$
+        with \(\Gamma, x_0, h\) as fittable parameters and fitted it to the scattered points by minimizing the mean square error. In particular, we loaded in the data, which we have stored in CSV form from our LabView output as a <code>Pandas DataFrame</code>. Extracting the array data we then use <code>scipy.optimize.curve_fit</code> to find the parameters that best fit the data and then plot the resulting graphs with <code>Matplotlib.pyplot</code>. 
+    </p>
+</div>
+    <div class = 'resistivity'> 
+        <img src="/images/Graphene/resistivity.png">
+    </div>
+</div>
+</div> -->
 
 
 
@@ -235,6 +292,18 @@ This procedure is given in the TeslatronPT system manual beginning on page 51.
     Step 3. Open the needle valve four full turns from its fully closed position. If a motor driven needle valve is fitted, set this to 99.9%.
 </b>
 
+<ol>
+    <li>
+        To do this, go to the <code>Mercury iTC</code> and go to the home panel. 
+    </li>
+    <li>
+        Select the <code>Control</code> button which will bring up the <code>Control Loop Configuration</code> panel. Under the <code>Sensor</code> drop down menu, select <code>Pressure_DB5</code> which will allow you to adjust the needle valve opening percentage and/or the pressure set point. 
+    </li>
+    <li>
+        In this case, adjacent to <code>Flow(%)</code> and to the right of <code>Manual/Automatic</code>, select the box with numerical values to bring up a keypad at which point you can input a specific needle valve opening to set it to. In this case, set it to <code> 99.9 </code> and press <code>OK</code> to confirm. At this step, the <code>Set Point</code> value which controls the pressure should now be <code>Disabled</code> (if the system was previously set to an automatic needle valve opening to hold a specific pressure). 
+    </li>
+</ol>
+
 
 
 
@@ -244,17 +313,65 @@ This procedure is given in the TeslatronPT system manual beginning on page 51.
     Step 4. Wait for up to 45 minutes to ensure that the majority of the gas charge has been returned to the storage tank. This is confirmed when the sample temperature is above 5K. At the end of this period the dial gauge on the storage tank should read approximately 0.45 bar gauge and the VTI pumping line pressure sensor should read approximately 0.0 mbar.
 </b>
 
+<ol>
+    <li>
+        Note. In the case of an unexpected warm up during a power outage, and the compressor and chiller have been off for a significant amount of time, the sample temperature may be already be higher than 5K and is not a reliable gauge for if a majority of the Helium gas has been returned to the storage tank. 
+    </li>
+    <li>
+        The storage tank dial gauge is immediately to the right of the storage tank on the cart. For pressure in units of <code>bar</code> look at the position of the needle relative to the <code>red</code> markings. Note that in between the marked numbers (ie, 0, 0.5, 1.0, ...), the larger (smaller) ticks are in steps of 0.1 bar (0.05 bar). 
+    </li> 
+    <li>
+        The VTI pumping line pressure can be read by looking at the <code>Mercury iTC</code> home panel in the bottom right corner under <code>Pressure_DB5.p</code> which gives a numerical value for the VTI pumping line pressure in units of mB. 
+    </li>
+    <li>
+        <b>Note.</b> <br> Previous values during previous warm ups were as follows
+        <ul>
+            <li>
+                Nov. 2021
+            </li>
+            <li>
+                Nov. 2022
+            </li>
+            <li>
+                Dec. 2022
+            </li>
+        </ul>
+    </li>
+</ol>
+
 
 
 
 <b><br><br> 
     Step 5. Close the NW25 VTI pumping port valve. Do not close the NW16 VTI return line valve and/or the zeolite trap exit valve. 
 </b>
+<ol>
+    <li>
+        The NW25 VTI pumping port valve is located at the top of the cryostat. It is distinguished by its relatively large knobbed valve and NW25 vacuum pipe tube connected to the nXDS circulation pump on the cart. 
+    </li>
+    <li>
+        Close this by turning the knob clockwise (righty tighty). 
+    </li>
+    <li>
+        Leave the following valves open during this process. 
+    </li>
+</ol>
 
 
 <b><br><br> 
     Step 6. Close the storage tank isolation valve and fit the anti-tamper clip. 
 </b>
+<ol>
+    <li>
+        Remove the red anti-tamper clip.
+    </li>
+    <li>
+        Turn the storage tank isolation valve clockwise until tight. The marking should change from a red <code>OPEN</code> to a blue <code>CLOSED</code>.
+    </li>
+    <li>
+        Re-fit the anti-tamper clip by sliding it back on in the same position (note a pin that needs to be inserted in)
+    </li>
+</ol>
 
 
 <b><br><br> 
@@ -303,28 +420,42 @@ This procedure is given in the TeslatronPT system manual beginning on page 51.
     </h3>
 
     <b><br><br> 
-        Step 11. Connect a turbo pump to the NW16 zeolite trap pump out valve. 
+        Step 11. Connect a turbo pump to the NW16 zeolite trap pump out valve (<u>with the trap pump out valve still closed!!</u>). 
     </b>
 
     <ol>
         <li>
-            We have access to a <code>Leybold PT 70 F Compact Turbomolecular</code> pump (from now on referred to as the Turbo). This is typically stored on or near the sink/counter behind the cart in Room 263. Similarly, we also have an additional <code>nXDS dry scroll</code>nXDS  that is likewise stored in a similar location (not to be confused with the one mounted on the cart, and from now on referred to as the roughing pump).<br><br>
+            We have access to a <code>Leybold PT 70 F Compact Turbomolecular</code> pump (from now on referred to as the Turbo). This is typically stored on or near the sink/counter behind the cart in Room 263. Similarly, we also have an additional <code>nXDS dry scroll</code>nXDS  that is likewise stored in a similar location (not to be confused with the one mounted on the cart, and from now on referred to as the roughing pump). <br><br>
 
-            We would like to connect these together (typically in series) to perform the pumping of the zeolite trap as the off-gassing from the zeolite trap can overwhelm the Turbo (Turbo vacuums only work well in high vacuum environments) 
+            We would like to connect these together (typically in series) to perform the pumping of the zeolite trap as the off-gassing from the zeolite trap can overwhelm the Turbo (Turbo vacuums only work well in high vacuum environments).
+
+            Likewise, these are used in conjunction with two gauges which can read the vacuum pressure of the system. 
+
+            
         </li>
 
 
         <li>
-            If the connections on the Turbo are as pictured in Fig. then 
+            If the connections on the Turbo are as pictured in Fig. then proceed to the next step. If not, use NW25 flanges, o-rings, and converters to set up the connections. The important aspects are the connections to the two gauges. 
         </li>
 
 
         <li>
-            Connect the gauges. 
+            Take one of the <code>NW25 vacuum pipe tubes</code> (preferably one of the shorter ones) to connect the zeolite trap pump out port to the turbo pump. 
+            <ol>
+                <li>
+                    Go to the 
+                </li>
+            </ol>
         </li>
 
         <li>
             Take an NW25 vacuum tube... 
+        </li>
+
+
+
+        <li>
         </li>
     </ol>
 
